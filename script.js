@@ -1,4 +1,3 @@
-// 页面加载完成后的动画
 document.addEventListener("DOMContentLoaded", function() {
     // 技能条动画
     const skillBars = document.querySelectorAll(".skill-fill");
@@ -13,18 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
     skillBars.forEach(bar => observer.observe(bar));
 
     // 导航栏滚动效果
-    let lastScroll = 0;
     window.addEventListener("scroll", function() {
         const nav = document.querySelector("nav");
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
+        if (window.pageYOffset > 100) {
             nav.style.background = "rgba(30, 30, 47, 0.98)";
         } else {
             nav.style.background = "rgba(30, 30, 47, 0.95)";
         }
-        
-        lastScroll = currentScroll;
     });
 
     // 平滑滚动
