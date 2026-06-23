@@ -157,9 +157,15 @@ nav {
 }
 
 .skill-name {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     font-size: 16px;
     margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-pct {
+    color: #7c5cff;
     font-weight: bold;
 }
 
